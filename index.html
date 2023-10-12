@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FilmFinder</title>
-  <link href="styles.css" rel="stylesheet">
-  <script src="script.js"></script>
-</head> 
-<body>
   <head>
-    <nav>
-      <div class="site-title">Finland</div>
-        <ul>
-            <li><a href="/cinéma">Cinéma</a></li>
-            <li><a href="/film">Film</a></li>
-            <li><a href="/série">Série</a></li>
-        <ul>
-    </nav>
-    <div class="hero">
-      <div class="hero_item">
-        <h1>filmFinder</h1>
-        <p>un site de recherche de film</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFinder</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head> 
+  <body>
+    <header>
+      <nav>
+        <div class="site-title">Finland</div>
+          <ul>
+              <li><a href="/cinéma">Cinéma</a></li>
+              <li><a href="/film">Film</a></li>
+              <li><a href="/série">Série</a></li>
+          <ul>
+      </nav>
+      <div class="hero">
+        <div class="hero_item">
+          <h1>filmFinder</h1>
+          <p>un site de recherche de film</p>
+        </div>
       </div>
-    </div>
-  </head>
-  <main>
-    <div class="search-container">
-      <form action="/search">
-        <input type="text" placeholder="Recherche..." name="search">
-        <button type="submit"> <i class="fa fa-search">
-          <i>&#10162;</i></button>
+    </header>
+    <main>
+      <h1>Recherche de Films</h1>
+      <form id="movie-search">
+          <input type="text" id="search-bar" placeholder="Entrez le nom du film">
+          <button type="submit">Rechercher</button>
       </form>
-    </div>
-  </main>
-  <footer></footer>
-</body>
+      <article id="film-list">
+        <div id="modal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 id="modal-title"></h2>
+              <p id="modal-release"></p>
+              <p id="modal-plot"></p>
+          </div>
+        </div>
+      </article>
+      <div class="card text-center">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Défilez pour plus de film</h5>
+          <p class="card-text"> La liste des films, sont non exhaustifs.</p>
+          <a href="#" class="btn btn-primary">Revenir en Haut</a>
+        </div>
+        <div class="card-footer text-muted">
+          Tout droit réservé
+        </div>
+      </div>
+    <main>
+  </body>
 </html>
