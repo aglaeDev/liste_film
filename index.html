@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <title>FilmFinder</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+</head> 
 <body>
-  
+  <head>
+    <nav>
+      <div class="site-title">Finland</div>
+        <ul>
+            <li><a href="/cinéma">Cinéma</a></li>
+            <li><a href="/film">Film</a></li>
+            <li><a href="/série">Série</a></li>
+        <ul>
+    </nav>
+    <div class="hero">
+      <div class="hero_item">
+        <h1>filmFinder</h1>
+        <p>un site de recherche de film</p>
+      </div>
+    </div>
+  </head>
+  <main>
+    <div class="search-container">
+      <form action="/search">
+        <input type="text" placeholder="Recherche..." name="search">
+        <button type="submit"> <i class="fa fa-search">
+          <i>&#10162;</i></button>
+      </form>
+    </div>
+  </main>
+  <footer></footer>
 </body>
 </html>

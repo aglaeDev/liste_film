@@ -1,0 +1,81 @@
+body {
+  width: 100%;;
+  z-index: 10;
+  margin :0;
+}
+
+nav {
+  height: 70px;
+  background: #292f36;
+}
+
+nav div {
+  color: white;
+  font-size: 2rem;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+nav ul { 
+  margin: 0 2% auto 0;
+  text-align: right;
+  
+}
+nav ul li { 
+  display: inline-block; 
+  line-height: 60px;
+  margin-left: 10px;
+}
+nav ul li a {
+  text-decoration: none; 
+  color: #a9abae;
+}
+
+.hero {
+  /* 縦横中央揃えの記述は以下の2行だけ！ */
+  display: grid;
+  place-items: center;
+
+  height: 100vh;
+  background-image: url(https://source.unsplash.com/1600x900/?film);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero_item {
+  line-height: 1;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 300px;
+  background-color: #f1f1f1;
+}
+
+/* Style du bouton de recherche */
+.search-container button {
+  padding: 10px;
+  background: #496baa;
+  color: #fff;
+  width: 50px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+
+}
