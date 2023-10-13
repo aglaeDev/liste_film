@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmFinder</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
   </head> 
   <body>
     <header>
@@ -29,7 +27,7 @@
       <h1>Recherche de Films</h1>
       <form id="movie-search">
           <input type="text" id="search-bar" placeholder="Entrez le nom du film">
-          <button type="submit">Rechercher</button>
+          <button type="submit" id="searchform">Rechercher</button>
       </form>
       <article id="film-list">
         <div id="modal" class="modal">
@@ -55,5 +53,6 @@
         </div>
       </div>
     <main>
+    <script src="script.js"></script>
   </body>
 </html>

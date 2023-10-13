@@ -1,28 +1,30 @@
-const apikeys = "253c4db"
+const apiKey = "253c4db"
 
 const searchMovie = document.getElementById("movie-search");
-const searchBar = document.getElementById("search-bar");
+var searchBar = document.getElementById("search-bar");
 const filmList = document.getElementById("film-list");
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
 const modalRelease = document.getElementById("modal-release");
 const modalPlot = document.getElementById("modal-plot");
 const closeBtn = document.querySelector(".close");
+var searchForm = document.getElementById("searchform");
 
 let currentPage = 1;
 let isLoading = false;
 
+
 searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     currentPage = 1;
     filmList.innerHTML = "";
-    searchFilms();
+    MovieSearch();
 });
 
 function MovieSearch() {
-    const searchTerm = searchBar.value;
-    const apiUrl = `https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}&page=${currentPage}`;
-
+    var searchTerm = searchBar.value;
+    var apiUrl = `https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}&page=${currentPage}`;
+   
     if (searchTerm && !isLoading) {
         isLoading = true;
         fetch(apiUrl)
@@ -34,6 +36,7 @@ function MovieSearch() {
                 }
                 if (data.Search) {
                     data.Search.forEach((film) => {
+                        console.log("marche bien");
                         createFilmCard(film);
                     });
                 } else if (currentPage === 1) {
@@ -109,9 +112,11 @@ window.addEventListener("scroll", () => {
     if (scrollY + windowHeight >= documentHeight - 100) {
         if (!isLoading) {
             currentPage++;
-            searchFilms();
+            MovieSearch();
         }
     }
 });
 
 
+
+MovieSearch();
